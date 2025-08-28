@@ -8,20 +8,27 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="landing.js" defer></script>
 </head>
+
 <body>
+
     <div class="header">
         <div class="navbar">
             <div class="container-img"><img src="../landing/images/bookLogo.jpg" alt="Logo"></div>
             <div class="title">The Book Club</div>
         </div>
+
         <div class="header-content">
             <div class="search-bar">
                 <input type="search" placeholder="Search books..."></div>
+
             <ul class="links">
-                        <li><a href="https://google.com">Sign in/Register</a></li>
-                        <li><a href="https://google.com">Library</a></li>
-                        
+                <li data-show="all"><a href="library.html">Library</a></li>
+                <li data-show="guest"><a href="sign-in.html" id="link-signin">Sign in / Register</a></li>
+                <li data-show="auth" class="hidden"><a href="profile.html">My Profile</a></li>
+                <li data-show="auth" class="hidden"><a href="groups.html">All Groups</a></li>
+                <li data-show="auth" class="hidden"><a href="create-group.html">Create Group</a></li>
             </ul>
         </div>
     </div>
