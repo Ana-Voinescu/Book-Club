@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Book Club</title>
+    <link rel="stylesheet" href="library.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="container-img"><img src="../landing/images/bookLogo.jpg" alt="Logo"></div>
+            <div class="title"><a href="../landing/index.html">The Book Club</a></div>
+        </div>
+
+        <div class="header-content">
+            <div class="search-bar">
+                <input type="search" placeholder="Search books..."></div>
+
+            <ul class="links">
+                <li data-show="all"><a href="library.html">Library</a></li>
+                <li data-show="guest"><a href="sign-in.html" id="link-signin">Sign in / Register</a></li>
+                <li data-show="auth" class="hidden"><a href="profile.html">My Profile</a></li>
+                <li data-show="auth" class="hidden"><a href="groups.html">All Groups</a></li>
+                <li data-show="auth" class="hidden"><a href="create-group.html">Create Group</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="library">
+        <h2 class="library-title">Library</h2>
+        <div class="books-grid">
+            <article class="book-card">
+                <div class="cover-wrap">
+                    <img class="cover" src="../images/books/WilliamShakespeare.jpg" alt="Book cover"></div>
+                    <div class="info">
+                        <h3 class="title">William Shakespeare</h3>
+                        <p class="author">William Shakespeare</p>
+                        <div class="meta">
+                        <svg class="bookmark" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"></path>
+                        </svg>
+                        <span class="price">0</span>
+                        </div>
+                    </div>
+            </article>
+
+            <article class="book-card">
+                <div class="cover-wrap">
+                    <img class="cover" src="../images/books/mobyDick.jpg" alt="Book cover"></div>
+                    <div class="info">
+                        <h3 class="title">moby Dick</h3>
+                        <p class="author">moby Dick</p>
+                        <div class="meta">
+                        <svg class="bookmark" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"></path>
+                        </svg>
+                        <span class="price">0</span>
+                        </div>
+                    </div>
+            </article>
+
+            <article class="book-card">
+                <div class="cover-wrap">
+                    <img class="cover" src="../images/books/Romeo&Juliet.jpg" alt="Book cover"></div>
+                    <div class="info">
+                        <h3 class="title">Romeo&Juliet</h3>
+                        <p class="author">William Shakespeare</p>
+                        <div class="meta">
+                        <svg class="bookmark" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"></path>
+                        </svg>
+                        <span class="price">10</span>
+                        </div>
+                    </div>
+            </article>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+      Copyright "©" The Book Club 2025
+    </div>
+</body>
+</html>
