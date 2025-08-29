@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Book Club</title>
+    <link rel="stylesheet" href="book.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="landing.js" defer></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="container-img"><img src="../landing/images/bookLogo.jpg" alt="Logo"></div>
+            <div class="title"><a href="../landing/index.html">The Book Club</a></div>
+        </div>
+
+        <div class="header-content">
+            <div class="search-bar">
+                <input type="search" placeholder="Search books..."></div>
+
+            <ul class="links">
+                <li data-show="all"><a href="../library/library.html">Library</a></li>
+                <li data-show="guest"><a href="sign-in.html" id="link-signin">Sign in / Register</a></li>
+                <li data-show="auth" class="hidden"><a href="profile.html">My Profile</a></li>
+                <li data-show="auth" class="hidden"><a href="groups.html">All Groups</a></li>
+                <li data-show="auth" class="hidden"><a href="create-group.html">Create Group</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+        <article class="book-card">
+            <div class="cover-wrap">
+                <img class="cover" src="../images/books/Romeo&Juliet.jpg" alt="Book cover"></div>
+                <div class="info">
+                    <h3 class="title">Romeo&Juliet</h3>
+                    <p class="author">Author: William Shakespeare</br>Realese year: 1998</p>
+                    <p class="summery">Shakespeare’s timeless tragedy of two young lovers from feuding families.</br>
+                    Their passionate romance ends in heartbreak, symbolizing love’s power and peril.</p>
+                    <div class="meta">
+                    <svg class="bookmark" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"></path>
+                    </svg>
+                    <span class="price">10</span>
+                    <div class="purchase-actions">
+                        <div class="state-guest "></div>
+                        <button class="state-buy hidden">Buy Now</button>
+                        <a class="state-read hidden" href="https://www.gutenberg.org/cache/epub/1513/pg1513-images.html">Read PDF</a>
+                    </div>
+                    </div>
+            </div>
+        </article>
+
+        <section class="forum" aria-labelledby="forum-title">
+        <h2 id="forum-title">Discussion</h2>
+
+        <ol class="thread">
+            <li class="post">
+            <h3 class="post-title">My review to Romeo and Juliet</h3>
+            <p class="post-content">Its the best book ever…</p>
+
+            <div class="replies">
+                <div class="reply">
+                <p>never.</p>
+                <div class="reply-actions">
+                    <button class="btn small outline">Reply</button>
+                    <button class="btn small outline">Delete</button>
+                </div>
+                </div>
+            </div>
+
+            <div class="editor reply-form hidden">
+                <textarea placeholder="Write a reply..."></textarea>
+                <div class="actions">
+                <button class="btn small primary">Reply</button>
+                <button class="btn small outline">Cancel</button>
+                </div>
+            </div>
+            </li>
+
+
+        </ol>
+
+        <div class="editor new-post">
+            <input class="input title" type="text" placeholder="Post title..." />
+            <textarea class="input body" placeholder="Write a new post..."></textarea>
+            <div class="actions">
+            <button class="btn primary">Post</button>
+            <button class="btn outline">Clear</button>
+            </div>
+        </div>
+        </section>
+
+
+
+
+
+
+
+    <div class="footer">
+      Copyright "©" The Book Club 2025
+    </div>
+</body>
+</html>
