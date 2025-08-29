@@ -8,21 +8,19 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <script src="landing.js" defer></script>
+    <script src="landing.js" defer></script><!-- TO DO! -->
 </head>
-
 <body>
-
+   <!-- Global header shared across pages; some nav actions are hidden in guest mode -->
     <div class="header">
         <div class="navbar">
             <div class="container-img"><img src="../landing/images/bookLogo.jpg" alt="Logo"></div>
             <div class="title"><a href="index.html">The Book Club</a></div>
         </div>
-
         <div class="header-content">
+            <!-- Search input with autocomplete; shows matching book titles and navigates on Enter -->
             <div class="search-bar">
                 <input type="search" placeholder="Search books..."></div>
-
             <ul class="links">
                 <li data-show="all"><a href="../library/library.html">Library</a></li>
                 <li data-show="guest"><a href="sign-in.html" id="link-signin">Sign in / Register</a></li>
@@ -42,9 +40,6 @@
         <button >Sign Up</button>
     </div>
     
-
-
-
     <div class="info">
         <div class="info-title">Join us!</div>
         <div class="container">
@@ -67,6 +62,6 @@
     <div class="footer">
       Copyright "©" The Book Club 2025
     </div>
-</body>
 
+</body>
 </html>

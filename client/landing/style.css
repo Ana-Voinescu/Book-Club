@@ -1,18 +1,21 @@
+/* Hide elements we don't want visible in certain states (guest/auth)*/
 .hidden { display: none !important; }
-html, body {
-  height: 100%;     
-  margin: 0;
-}
+
+/* Make page fill the full viewport height and remove the browser’s default body margin */
+html, body {height: 100%;     margin: 0;}
+
+/* Page layout: use flex column to stack header/content/footer; apply beige background and Roboto font */
 body {
     display: flex;
     flex-direction: column;
     background-color: #f4e3c9;
     font-family: 'Roboto', sans-serif;          
 }
-.title a {
-  text-decoration: none; 
-  color: inherit;          
-}
+
+
+/********************************************************class="header"***********************************************************************/
+
+/*flex layout with spaced items, top padding, beige background, and subtle shadow */
 .header,.intro,.container{
     display: flex;
     justify-content: space-between;
@@ -21,42 +24,15 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
+/* Header layout: align items center, add spacing between them, and apply inner padding */
 .navbar, .header-content{
   display: flex;
   align-items: center;  
   gap: 10px;            
   padding: 8px 16px;          
 }
-.footer {
-  margin-top: auto;
-  color: #e1bf96;
-  text-align: center;
-  padding: 32px;
-  font-size: 18px;
-  text-shadow: 0 1px 0 rgba(0,0,0,.15); 
-}
-.intro{
-    gap: 16px;
-    padding: 16px;
-    align-items: center;
-    padding: 32px 64px;
-    width: 900px;
-    border-radius: 10px;
-    margin: 80px auto;
-}
 
-.info{
-    padding-bottom: 80px;
-    display: flex;
-    flex-direction: column;
-    gap:40px;
-}
-.container{
-    display: flex;
-    justify-content: center;
-    gap: 52px;
-}
-
+/* Site logo image: fixed height with aspect ratio, rounded corners, soft shadow, and right margin */
 .container-img img{
     height: 56px; width:auto;
     border-radius: 10px;
@@ -65,7 +41,7 @@ body {
     margin-right: 8px;   
 }
 
-
+/* Main titles (site, intro, info): bold large white text with slight spacing and subtle shadow */
 .title a,.intro-Title,.info-title{
   font-weight: 800;
   font-size: 36px;      
@@ -73,24 +49,14 @@ body {
   letter-spacing: .5px; 
   text-shadow: 0 1px 0 rgba(0,0,0,.15); 
 }
-ul {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    gap: 16px;
-}
-a,p,.text{
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    text-shadow: 0 1px 0 rgba(0,0,0,.15); 
-}
-.search-bar {
-  position: relative;
-  width: 280px;         
-}
 
+/* remove underline*/
+a {text-decoration: none; }
+
+/* Search bar container: fixed width and relative positioning for the input & icon */
+.search-bar {position: relative;width: 280px;}
+
+/* Search input: full-width pill with left search icon, inner padding, subtle border and inset shadow */
 .search-bar input[type="search"]{
     width: 100%;
     padding: 10px 14px 10px 40px;
@@ -105,16 +71,48 @@ a,p,.text{
     height: 38px;
     box-shadow: inset 0 1px 2px rgba(0,0,0,.12);
 }
+
+/* Navigation list: remove bullets, reset spacing, use flex with equal gaps between items */
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+}
+
+a,p,.text{
+    color: white;
+    font-size: 18px;
+    text-shadow: 0 1px 0 rgba(0,0,0,.15); 
+}
+
+/* Header nav links: horizontal flex list with spacing and reset default list styling */
 .links{
     display:flex;
     gap: 20px; 
     list-style:none;
     margin:0; padding:0; 
 }
+
+/*add a subtle translucent highlight */
 .links a:hover{
   background: rgba(255,255,255,.18);
 }
 
+
+/********************************************************************class="intro"*************************************************************/
+/* Intro section: centered panel (900px) with spacing and rounded corners;*/
+.intro{
+    gap: 16px;
+    align-items: center;
+    padding: 32px 64px;
+    width: 900px;
+    border-radius: 10px;
+    margin: 80px auto;
+}
+
+/* Base button style: medium text, bold white on beige background, padded with rounded corners and pointer cursor */
 button{
     font-size: 16px;
     color: white;
@@ -126,10 +124,34 @@ button{
     border: 1px solid #f4e3c9;
 }
 
+/*********************************************************************class="info"*****************************************************************/
+/*vertical stack with generous spacing; extra bottom padding for separation*/
+.info{
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
+
+.info-title{
+    display: flex;
+    justify-content: center;
+}
+
+/*center its children horizontally with equal spacing between them */
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+}
+
+/*limit width and center text for balanced appearance */
 .info-option{
   max-width: 200px; 
   text-align: center; 
 }
+
+/*full-width thumbnails with fixed height, cropped (cover), rounded corners, beige border, and bottom spacing */
 img {
   width: 100%;
   height: 140px;
@@ -138,7 +160,24 @@ img {
   border: 2px solid #f4e3c9; 
   margin-bottom: 8px;
 }
-.info-title{
-    display: flex;
-    justify-content: center;
+
+/********************************************************************class="footer"*************************************************************/
+/* Footer bar: stick to bottom via flex (margin-top:auto), centered text with padding and soft highlight */
+.footer {
+  margin-top: auto;
+  color: #e1bf96;
+  text-align: center;
+  padding: 32px;
+  font-size: 18px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15); 
 }
+
+
+
+
+
+
+
+
+
+
