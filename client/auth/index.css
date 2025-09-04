@@ -1,0 +1,146 @@
+/* Hide elements we don't want visible in certain states (guest/auth)*/
+.hidden { display: none !important; }
+
+/* Make page fill the full viewport height and remove the browser’s default body margin */
+html, body {height: 100%;     margin: 0;}
+
+/* Page layout: use flex column to stack header/content/footer; apply beige background and Roboto font */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4e3c9;
+    font-family: 'Roboto', sans-serif;          
+}
+
+
+/********************************************************class="header"***********************************************************************/
+
+/*flex layout with spaced items, top padding, beige background, and subtle shadow */
+.header,.choose{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px; 
+    background-color:#e1bf96;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+/* Header layout: align items center, add spacing between them, and apply inner padding */
+.navbar, .header-content{
+  display: flex;
+  align-items: center;  
+  gap: 10px;            
+  padding: 8px 16px;          
+}
+
+/* Site logo image: fixed height with aspect ratio, rounded corners, soft shadow, and right margin */
+.container-img img{
+    height: 56px; width:auto;
+    border-radius: 10px;
+    border: none;                
+    box-shadow: 0 2px 6px rgba(0,0,0,.12); 
+    margin-right: 8px;   
+}
+
+/* Main titles (site): bold large white text with slight spacing and subtle shadow */
+.title a,.intro-Title{
+  font-weight: 800;
+  font-size: 36px;      
+  color: #ffffff;
+  letter-spacing: .5px; 
+  text-shadow: 0 1px 0 rgba(0,0,0,.15); 
+}
+
+/* remove underline*/
+a {text-decoration: none; }
+
+/* Search bar container: fixed width and relative positioning for the input & icon */
+.search-bar {position: relative;width: 280px;}
+
+/* Search input: full-width pill with left search icon, inner padding, subtle border and inset shadow */
+.search-bar input[type="search"]{
+    width: 100%;
+    padding: 10px 14px 10px 40px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.25);
+    outline: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='8'/><line x1='21' y1='21' x2='16.65' y2='16.65'/></svg>");
+    background-position: 12px 50%;
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    height: 38px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.12);
+}
+
+/* Navigation list: remove bullets, reset spacing, use flex with equal gaps between items */
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+}
+
+a,.text{
+    color: white;
+    font-size: 18px;
+    text-shadow: 0 1px 0 rgba(0,0,0,.15); 
+}
+
+/* Header nav links: horizontal flex list with spacing and reset default list styling */
+.links{
+    display:flex;
+    gap: 20px; 
+    list-style:none;
+    margin:0; padding:0; 
+}
+
+/*add a subtle translucent highlight */
+.links a:hover{
+  background: rgba(255,255,255,.18);
+}
+
+
+/********************************************************************class="choose"*************************************************************/
+/* Intro section: centered panel (900px) with spacing and rounded corners;*/
+.choose{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    padding: 32px 64px;
+    width: 900px;
+    border-radius: 10px;
+    margin: 80px auto;
+}
+
+/* Base button style: medium text, bold white on beige background, padded with rounded corners and pointer cursor */
+.btn{
+    font-size: 18px;
+    color: white;
+    font-weight:600;
+    background-color:#f4e3c9 ;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 1px solid #f4e3c9;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+.actions-btns{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+
+/********************************************************************class="footer"*************************************************************/
+/* Footer bar: stick to bottom via flex (margin-top:auto), centered text with padding and soft highlight */
+.footer {
+  margin-top: auto;
+  color: #e1bf96;
+  text-align: center;
+  padding: 32px;
+  font-size: 18px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15); 
+}
