@@ -12,7 +12,7 @@ body {
     font-family: 'Roboto', sans-serif;          
 }
 /*******************************************************************class="header"*************************************************************/
-.header{
+.header,.group-card{
     display: flex;
     justify-content: space-between;
     padding-top: 20px; 
@@ -35,7 +35,7 @@ body {
     margin-right: 8px;   
 }
 
-.title a,.library-title {
+.title a,.groups-title {
     text-decoration: none; 
     color: inherit;          
     font-weight: 800;
@@ -89,26 +89,26 @@ ul {
   background: rgba(255,255,255,.18);
 }
 
-/*********************************************************************class="library"***********************************************************/
-/* Styles the library section as a vertical flex container with spacing and bottom padding */
-.library{
+/*********************************************************************class="groups"***********************************************************/
+/* Styles the groups section as a vertical flex container with spacing and bottom padding */
+.groups{
     padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     gap:40px;
 }
 
-.library-title{
+.groups-title{
     display: flex;
     justify-content: center;
 }
-/* Creates a responsive grid layout for the book cards: 
+/* Creates a responsive grid layout for the groups cards: 
    - grid = splits the container into rows and columns 
    - auto-fit + minmax = automatically adjusts the number of columns based on screen size (each card at least 160px wide)
    - gap = spacing between the cards 
    - padding = space inside the grid (top, bottom)
    - background = transparent so it inherits the page background */
-.books-grid {
+.group-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 16px;
@@ -116,9 +116,9 @@ ul {
   background: transparent;
 }
 
-/* Styles each book card as a centered flex column with padding, rounded corners, 
+/* Styles each group card as a centered flex column with padding, rounded corners, 
    and a hover effect that slightly lifts the card with a shadow */
-.book-card {
+.group-card {
   display: flex;
   flex-direction: column;  
   align-items: center;    
@@ -130,12 +130,12 @@ ul {
   margin: auto;  
 }          
 
-.book-card:hover {
+.group-card:hover {
   transform: translateY(-2px);/* Slightly moves the card up when hovered */
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);/* Adds a soft shadow to highlight the card */
 }
 
-/* Styles the book cover image with fixed size, rounded corners, 
+/* Styles the group cover image with fixed size, rounded corners, 
    and ensures the image fills the box without distortion */
 .cover {
   width: 120px;   
@@ -156,31 +156,14 @@ ul {
   margin: 6px 0 2px;
 }
 
-.info .author {
+.info .purpose {
   font-size: 0.85rem;
   opacity: 0.8;/* Makes the book card slightly transparent*/
   margin: 0 0 6px;
 }
-
-.meta {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
+.group-card .info {
+  color: #000;   /* apply black to all text inside */
 }
-
-.bookmark {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-  opacity: 0.75;
-}
-
-.price {
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
 /******************************************************************class="footer"**************************************************************/
 .footer {
   margin-top: auto;
@@ -190,18 +173,4 @@ ul {
   font-size: 18px;
   text-shadow: 0 1px 0 rgba(0,0,0,.15); 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

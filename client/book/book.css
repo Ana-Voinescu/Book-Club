@@ -1,18 +1,18 @@
 .hidden { display: none !important; }
+
 html, body {
   height: 100%;     
   margin: 0;
 }
+
 body {
     display: flex;
     flex-direction: column;
     background-color: #f4e3c9;
     font-family: 'Roboto', sans-serif;          
 }
-.title a {
-  text-decoration: none; 
-  color: inherit;          
-}
+
+/*********************************************************************class="header"*********************************************************/
 .header,.intro,.container{
     display: flex;
     justify-content: space-between;
@@ -27,14 +27,7 @@ body {
   gap: 10px;            
   padding: 8px 16px;          
 }
-.footer {
-  margin-top: auto;
-  color: #e1bf96;
-  text-align: center;
-  padding: 32px;
-  font-size: 18px;
-  text-shadow: 0 1px 0 rgba(0,0,0,.15); 
-}
+
 .container-img img{
     height: 56px; width:auto;
     border-radius: 10px;
@@ -42,26 +35,17 @@ body {
     box-shadow: 0 2px 6px rgba(0,0,0,.12); 
     margin-right: 8px;   
 }
-.title a{
+
+.title a {
+  text-decoration: none; 
+  color: inherit;
   font-weight: 800;
   font-size: 36px;      
   color: #ffffff;
   letter-spacing: .5px; 
-  text-shadow: 0 1px 0 rgba(0,0,0,.15); 
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);           
 }
-ul {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    gap: 16px;
-}
-a{
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    text-shadow: 0 1px 0 rgba(0,0,0,.15); 
-}
+
 .search-bar {
   position: relative;
   width: 280px;         
@@ -81,15 +65,34 @@ a{
     height: 38px;
     box-shadow: inset 0 1px 2px rgba(0,0,0,.12);
 }
+
 .links{
     display:flex;
     gap: 20px; 
     list-style:none;
     margin:0; padding:0; 
 }
+
 .links a:hover{
   background: rgba(255,255,255,.18);
 }
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    text-shadow: 0 1px 0 rgba(0,0,0,.15); 
+}
+
+/***********************************************************************class="book-card"*****************************************************/
+
 .book-card {
   display: grid;
   flex-direction: column;  
@@ -104,14 +107,19 @@ a{
   margin: 32px auto;  
   border: 1px solid rgba(0,0,0,.06);
   box-shadow: 0 8px 24px rgba(0,0,0,.08);
-}  
-@media (max-width: 760px) { .book-card { grid-template-columns: 1fr; } }
-
+} 
 
 .book-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
+
+.book-card a { color: #2f2a25; text-shadow: none; }
+
+/* On screens 760px or smaller (e.g., mobile), adjust layout */
+@media (max-width: 760px) { .book-card { grid-template-columns: 1fr; } }
+
+.cover-wrap { align-self: start; }
 
 .cover {
   width: 100%;   
@@ -121,11 +129,14 @@ a{
   display: block;
   margin-bottom: 8px;
 }
-.cover-wrap { align-self: start; }
 
-.info {
-  text-align: left;      
-}
+.info {text-align: left;  }
+
+.info .title { font-family: 'Roboto Slab', serif; font-size: clamp(24px, 3.2vw, 36px); }
+
+.info .author { font-size: 16px; opacity: .85; }
+
+.summery { line-height: 1.6; max-width: 60ch; }
 
 .meta {
   display: flex;
@@ -133,6 +144,7 @@ a{
   align-items: center;
   gap: 12px;
 }
+
 .bookmark {
   width: 16px;
   height: 16px;
@@ -144,9 +156,12 @@ a{
   font-size: 0.9rem;
   font-weight: 600;
 }
-.info .title { font-family: 'Roboto Slab', serif; font-size: clamp(24px, 3.2vw, 36px); }
-.info .author { font-size: 16px; opacity: .85; }
-.summery { line-height: 1.6; max-width: 60ch; }
+
+/* Styles the "Buy Now" button:
+   - Dark pill-shaped button with bold white text.
+   - Includes hover effect (lift + stronger shadow).
+   - Active state pushes button back down.
+   - Focus state shows a gold outline for accessibility. */
 .state-buy {
   padding: 10px 16px;
   border-radius: 999px;
@@ -159,9 +174,15 @@ a{
   transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
 }
 .state-buy:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.12); }
+
 .state-buy:active { transform: translateY(0); }
+
 .state-buy:focus { outline: 2px solid #e1bf96; outline-offset: 2px; }
-.book-card a { color: #2f2a25; text-shadow: none; }
+
+/* Styles the "Read PDF" link:
+   - White pill-shaped button-like link with bold text.
+   - Hover state changes background color and lifts link slightly.
+   - Focus state shows a gold outline for accessibility. */
 .state-read {
   display: inline-block;
   padding: 8px 14px;
@@ -173,24 +194,37 @@ a{
   box-shadow: 0 1px 3px rgba(0,0,0,.06) inset;
   transition: background .12s ease, transform .12s ease;
 }
+
 .state-read:hover { background: #f7f4ee; transform: translateY(-1px); }
+
 .state-read:focus { outline: 2px solid #e1bf96; outline-offset: 2px; }
 
-.forum{
+/***************************************************************************class="reviews"***************************************************/
+
+/** Reviews section container:
+   - Constrains content to a readable width (max 900px) and centers it (auto left/right margin).
+   - Adds outer spacing (48px top/bottom) and inner padding (16px sides, 48px bottom) so text/forms don’t touch the edges.
+   - Keeps background transparent and removes chrome (no box-shadow/border) to blend with the page. */
+.reviews {
   max-width: 900px;
-  margin: 48px auto;  
+  margin: 48px auto;
   padding: 0 16px 48px;
   background: transparent;
   box-shadow: none;
   border: 0;
 }
-.forum h2{
+
+/* Reviews title */
+.reviews h2 {
   margin: 8px 0 16px;
   text-align: left;
   font-family: 'Roboto Slab', serif;
 }
 
-
+/* Thread list:
+   - Removes default list styling (no bullets/numbers, no padding/margin).
+   - Uses CSS counter 'post' to number posts manually (later applied in .post-title::before).
+   - This gives full control over how posts are styled and numbered instead of relying on browser defaults. */
 .thread { 
   list-style: none; 
   padding: 0; 
@@ -198,13 +232,20 @@ a{
   counter-reset: post; 
 }
 
-
+/* Individual post inside the thread:
+   - Increments the CSS counter 'post' by 1 for each .post element 
+     (so numbering works in .post-title::before).
+   - Adds bottom margin (20px) to create space between posts. */
 .thread > .post { 
   counter-increment: post; 
   margin-bottom: 20px; 
 }
 
-
+/* Post title numbering:
+   - Inserts the current 'post' counter value before each .post-title (e.g., "1. ", "2. ").
+   - Makes the number bold (font-weight: 700).
+   - Adds a small right margin (6px) to separate number from title text.
+   - Reduces opacity (0.7) so the number looks slightly lighter than the title. */
 .post-title::before {
   content: counter(post) ". ";
   font-weight: 700;
@@ -212,50 +253,116 @@ a{
   opacity: 0.7;
 }
 
-.post-title{ margin: 0 0 6px; font-size: 20px; font-family:'Roboto Slab', serif; }
-.post-content{ margin: 0 0 10px; color:#2f2a25; }
+.post-title { 
+  margin: 0 0 6px; 
+  font-size: 20px; 
+  font-family: 'Roboto Slab', serif; 
+}
 
+.post-content { 
+  margin: 0 0 10px; 
+  color: #2f2a25; 
+}
 
+/* Replies container:
+   - Indents replies (margin-left + padding-left) to visually nest them under the parent post.
+   - Adds a subtle vertical line (2px solid border-left) to connect replies to the original post.
+   - Sets position: relative so pseudo-elements (like ::before arrows/markers) can be positioned inside this container. */
 .replies {
   margin-left: 20px;
   padding-left: 16px;
   border-left: 2px solid rgba(0,0,0,.15);
   position: relative;
 }
-.reply{ margin: 8px 0; }
 
-.actions, .reply-actions{
-  display:flex; gap:8px; align-items:center; margin-top:8px;
-}
+.reply { margin: 8px 0; }
 
-
-.btn{
-  padding: 8px 14px; border-radius: 999px; border:1px solid rgba(0,0,0,.12);
-  background:#fff; font-weight:600; cursor:pointer;
-  box-shadow: 0 1px 3px rgba(0,0,0,.06) inset;
-}
-.btn.primary{ background:#2f2a25; color:#fff; box-shadow:none; }
-.btn.outline{ background:transparent; }
-.btn.small{ padding:6px 10px; font-size:14px; }
-
-.editor{ margin-top: 14px; }
-.input.title,
-.input.body,
-.editor textarea{
-  width: 100%;
-  border:1px solid rgba(0,0,0,.15);
-  border-radius: 10px;
-  padding: 10px 12px;
-  background:#fff;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.06);
-}
-.input.title{ margin-bottom:10px; font-weight:600; }
-.input.body, .editor textarea{ min-height: 110px; resize: vertical; }
+/* Replies arrow marker:
+   - Inserts a decorative arrow (↳) before the replies block to indicate nesting.
+   - Positioned absolutely relative to the .replies container (which is set to position: relative).
+   - Placed slightly to the left (left: -18px) and down (top: 4px).
+   - Uses a medium font size (18px) and reduced opacity (0.6) so it looks subtle. */
 .replies::before {
-  content: "↳";             
+  content: "↳";
   position: absolute;
-  left: -18px;              
-  top: 4px;                   
+  left: -18px;
+  top: 4px;
   font-size: 18px;
   opacity: 0.6;
+}
+
+/* Actions containers (.actions for forms, .reply-actions for replies):
+   - Uses flexbox to align buttons in a row.
+   - gap: 8px adds equal spacing between buttons.
+   - align-items: center vertically centers buttons in the row.
+   - margin-top: 8px adds space above the action row (separating it from text/inputs). */
+.actions,
+.reply-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.12);
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,.06) inset;
+}
+
+.btn.primary { background: #2f2a25; color: #fff; box-shadow: none; }
+
+.btn.outline { background: transparent; }
+
+.btn.small { padding: 6px 10px; font-size: 14px; }
+
+/* Editors (new post + reply form) */
+.editor { margin-top: 14px; }
+
+/* Shared styling for text inputs and textareas inside editors:
+   - Full width fields with soft rounded corners and subtle inner shadow.
+   - Neutral white background and light border to match the site’s form style. */
+.input.title,
+.input.body,
+.editor textarea {
+  width: 100%;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.06);
+}
+
+.input.title { margin-bottom: 10px; font-weight: 600; }
+
+/* Body/textarea specifics:
+   - Minimum height for comfortable typing and user-resizable vertically. */
+.input.body, 
+.editor textarea { min-height: 110px; resize: vertical; }
+
+/* Responsive adjustments for small screens (≤600px wide):
+   - Reduce inner padding of the reviews section for more space efficiency.
+   - Decrease post title font size so titles fit better on narrow screens.
+   - Shrink small buttons’ font size for a more compact look on mobile. */
+@media (max-width: 600px) {
+  .reviews { padding: 0 12px 40px; }
+  .post-title { font-size: 18px; }
+  .btn.small { font-size: 13px; }
+}
+
+
+/***************************************************************************<div class="footer">***********************************************/
+
+.footer {
+  margin-top: auto;
+  color: #e1bf96;
+  text-align: center;
+  padding: 32px;
+  font-size: 18px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15); 
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Book Club</title>
+    <link rel="stylesheet" href="groups.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="header">
+        <div class="navbar">
+            <div class="container-img"><img src="../landing/images/bookLogo.jpg" alt="Logo"></div>
+            <div class="title"><a href="../landing/index.html">The Book Club</a></div>
+        </div>
+        <div class="header-content">
+            <div class="search-bar">
+                <input type="search" placeholder="Search books..."></div>
+            <ul class="links">
+                <li data-show="all"><a href="../library/library.html">Library</a></li>
+                <li data-show="guest"><a href="../auth/index.html" id="link-signin">Sign in / Register</a></li>
+                <li data-show="auth" class="hidden"><a href="profile.html">My Profile</a></li>
+                <li data-show="auth" class="hidden"><a href="../groups/groups.html">All Groups</a></li>
+                <li data-show="auth" class="hidden"><a href="create-group.html">Create Group</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--TO DO! add the purpose to the sql!-->
+    <div class="groups"> <!-- holds the section title and all groups cards -->
+        <h2 class="groups-title">The book clubs:</h2>
+        <div class="group-grid"><!-- container that holds all groups-card elements -->
+            <a class="book-link" href="../book/book.html">
+                <article class="group-card"><!-- Single group card: contains cover image, title,purpose -->
+                <div class="cover-wrap"><!-- Cover wrapper: container for the group cover image (helps with styling, sizing, and adding overlays if needed) -->
+                    <img class="cover" src="../groups/groups/Cullen_Kids.webp" alt="Group cover"></div>
+                     <!-- Info container: holds all textual information about the group -->
+                    <div class="info">
+                        <h3 class="title">The Cullens</h3>
+                        <p class="purpose">The Book Club of the Cullen Siblings</p>
+                    </div>
+            </article>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="footer">
+      Copyright "©" The Book Club 2025
+    </div>
+</body>
+</html>

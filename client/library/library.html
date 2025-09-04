@@ -9,18 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
     <div class="header">
         <div class="navbar">
             <div class="container-img"><img src="../landing/images/bookLogo.jpg" alt="Logo"></div>
             <div class="title"><a href="../landing/index.html">The Book Club</a></div>
         </div>
-
         <div class="header-content">
             <div class="search-bar">
                 <input type="search" placeholder="Search books..."></div>
-
             <ul class="links">
                 <li data-show="all"><a href="library.html">Library</a></li>
                 <li data-show="guest"><a href="sign-in.html" id="link-signin">Sign in / Register</a></li>
@@ -31,17 +29,21 @@
         </div>
     </div>
 
-    <div class="library">
+    <div class="library"> <!-- Library container: holds the section title and all book cards -->
         <h2 class="library-title">Library</h2>
-        <div class="books-grid">
-            <article class="book-card">
-                <div class="cover-wrap">
+        <div class="books-grid"><!-- Books grid: container that holds all book-card elements -->
+            <article class="book-card"><!-- Single book card: contains cover image, title, author, price, and bookmark icon -->
+                <div class="cover-wrap"><!-- Cover wrapper: container for the book cover image (helps with styling, sizing, and adding overlays if needed) -->
                     <img class="cover" src="../images/books/WilliamShakespeare.jpg" alt="Book cover"></div>
+                     <!-- Info container: holds all textual information about the book -->
                     <div class="info">
                         <h3 class="title">William Shakespeare</h3>
                         <p class="author">William Shakespeare</p>
+                        <!-- Meta section: extra info such as bookmark icon and price -->
                         <div class="meta">
+                             <!-- Bookmark icon (SVG graphic) -->
                         <svg class="bookmark" viewBox="0 0 24 24" aria-hidden="true">
+                             <!-- Path defines the shape of the bookmark icon -->
                         <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"></path>
                         </svg>
                         <span class="price">0</span>
