@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Book Club</title>
+    <link rel="stylesheet" href="../group/group_page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="landing.js" defer></script>
+</head>
+
+<body>
+        <div class="header">
+        <div class="navbar">
+            <div class="container-img"><img src="../landing/images/bookLogo.jpg" alt="Logo"></div>
+            <div class="title"><a href="../landing/index.html">The Book Club</a></div>
+        </div>
+        <div class="header-content">
+            <div class="search-bar">
+                <input type="search" placeholder="Search books..."></div>
+            <ul class="links">
+                <li data-show="all"><a href="../library/library.html">Library</a></li>
+                <li data-show="guest"><a href="../auth/index.css" id="link-signin">Sign in / Register</a></li>
+                <li data-show="auth" class="hidden"><a href="profile.html">My Profile</a></li>
+                <li data-show="auth" class="hidden"><a href="../groups/groups.html">All Groups</a></li>
+                <li data-show="auth" class="hidden"><a href="create-group.html">Create Group</a></li>
+            </ul>
+        </div>
+        </div>
+
+        <div class="page">
+        <div class="page-grid">
+            <main class="left">
+
+            <!-- group header -->
+            <section class="section group-header">
+                <img class="avatar" src="../groups/groups/Cullen_Kids.webp" alt="group photo">
+                <div class="details">
+                <h2 class="h2">The Cullens</h2>
+                <p class="muted">The Book Club of the Cullen Siblings</p>
+                <button class="state-user hidden">Join group</button>
+                <button class="state-member hidden">Leave the group</button>
+                </div>
+            </section>
+
+            <!-- participants -->
+            <section class="section">
+                <h3 class="h3">Participants</h3>
+                <ul class="list">
+                <li>Edward Cullen</li>
+                <li>Alice Cullen</li>
+                <li>Jasper Cullen</li>
+                </ul>
+            </section>
+
+            <!-- reading history -->
+            <section class="section">
+                <h3 class="h3">Reading history</h3>
+                <div class="covers">
+                <img src="../images/books/MobyDick.jpg" alt="Moby Dick">
+                </div>
+            </section>
+            </main>
+
+            <aside class="right">
+            <section class="section sticky">
+                <h3 class="h3">This week book:</h3>
+                <img class="book-cover" src="../images/books/Romeo&Juliet.jpg" alt="Romeo & Juliet cover">
+                <h4 class="h4">Romeo & Juliet</h4>
+                <a class="group-link" href="../book/book.html">
+                <button class="primary">Book Page</button>
+                </a>
+            </section>
+            </aside>
+        </div>
+        </div>
+        
+
+
+    
+    <div class="footer">
+      Copyright "©" The Book Club 2025
+    </div>
+</body>
+</html>
