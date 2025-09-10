@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Book Club</title>
+    <link rel="stylesheet" href="../create_group/create_group.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Global header shared across pages; some nav actions are hidden in guest mode -->
+    <div class="header">
+        <div class="navbar">
+            <div class="container-img"><img src="../landing/images/bookLogo.jpg" alt="Logo"></div>
+            <div class="title"><a href="../landing/index.html">The Book Club</a></div>
+        </div>
+        <div class="header-content">
+            <!-- Search input with autocomplete; shows matching book titles and navigates on Enter -->
+            <div class="search-bar">
+                <input type="search" placeholder="Search books..."></div>
+            <ul class="links">
+                <li data-show="all"><a href="../library/library.html">Library</a></li>
+                <li data-show="guest"><a href="../auth/index.html" id="link-signin">Sign in / Register</a></li>
+                <li data-show="auth" class="hidden"><a href="profile.html">My Profile</a></li>
+                <li data-show="auth" class="hidden"><a href="../groups/groups.html">All Groups</a></li>
+                <li data-show="auth" class="hidden"><a href="../create_group/create_group.html">Create Group</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+        <div class="create-group-page">
+        <h1 class="intro-Title">Start Your Own Reading Group</h1>
+
+        <form class="create-group-form">
+            <div class="fill">
+            <label for="groupName">Group Name:</label>
+            <input type="text" id="groupName" name="GroupName" placeholder="Enter the group name" required>
+            </div>
+
+            <div class="fill">
+            <label for="Description">Description of the group`s goal:</label>
+            <input type="text" id="Description" name="Description" placeholder="Enter description" required>
+            </div>
+
+            <div class="fill">
+            <label for="group-picture">Upload Group Picture:</label>
+            <input type="file" id="group-picture" name="group-picture" accept="image/*">
+            </div>
+
+            <button type="submit" class="btn primary">Create Group</button>
+        </form>
+        </div>
+
+    <div class="footer">
+      Copyright "©" The Book Club 2025
+    </div>
+</body>
+</html>
