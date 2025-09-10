@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Book Club</title>
+    <link rel="stylesheet" href="../profile/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+
+<body>
+        <div class="header">
+        <div class="navbar">
+            <div class="container-img"><img src="../landing/images/bookLogo.jpg" alt="Logo"></div>
+            <div class="title"><a href="../landing/index.html">The Book Club</a></div>
+        </div>
+        <div class="header-content">
+            <div class="search-bar">
+                <input type="search" placeholder="Search books..."></div>
+            <ul class="links">
+                <li data-show="all"><a href="../library/library.html">Library</a></li>
+                <li data-show="guest"><a href="../auth/index.css" id="link-signin">Sign in / Register</a></li>
+                <li data-show="auth" class="hidden"><a href="../profile/profile.html">My Profile</a></li>
+                <li data-show="auth" class="hidden"><a href="../groups/groups.html">All Groups</a></li>
+                <li data-show="auth" class="hidden"><a href="../create_group/create_group.html">Create Group</a></li>
+            </ul>
+        </div>
+        </div>
+
+        <div class="page">
+        <div class="page-grid">
+            <!-- profil info -->
+            <section class="section profil-header">
+                <div class="details">
+                <h2 class="h2">Edward Cullen</h2>
+                <p class="email">edward1305@gmail.com</p>
+                <div class="meta">
+                <!-- Bookmark icon (SVG graphic) -->
+                <svg class="bookmark" viewBox="0 0 24 24" aria-hidden="true">
+                <!-- Path defines the shape of the bookmark icon -->
+                <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"></path>
+                </svg>
+                <span class="price">0</span>
+                </div>
+                </div>
+            </section>
+
+            <section class="section">
+            <h3 class="h3">Reading history</h3>
+            <div class="covers">
+                <img src="../images/books/Romeo&Juliet.jpg" alt="Romeo&Juliet">
+            </div>
+            </section>
+
+            <section class="section">
+            <h3 class="h3">My groups</h3>
+            <div class="groups-grid">
+                <a class="group-card-mini" href="../group/group_page.html">
+                <img class="group-thumb" src="../groups/groups/Cullen_Kids.webp" alt="The Cullens group cover">
+                <div class="group-caption">The Cullens</div>
+                </a>
+            </div>
+            </section>
+        </div>
+    </div>
+            
+    <div class="footer">
+      Copyright "©" The Book Club 2025
+    </div>
+</body>
+</html>

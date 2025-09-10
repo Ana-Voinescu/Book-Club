@@ -1,0 +1,204 @@
+.hidden { display: none !important; }
+
+html, body {
+  height: 100%;     
+  margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4e3c9;
+    font-family: 'Roboto', sans-serif;          
+}
+
+/*********************************************************************class="header"*********************************************************/
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px; 
+    background-color:#e1bf96;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.navbar, .header-content{
+  display: flex;
+  align-items: center;  
+  gap: 10px;            
+  padding: 8px 16px;          
+}
+
+.container-img img{
+    height: 56px; width:auto;
+    border-radius: 10px;
+    border: none;                
+    box-shadow: 0 2px 6px rgba(0,0,0,.12); 
+    margin-right: 8px;   
+}
+
+.title a {
+  text-decoration: none; 
+  color: inherit;
+  font-weight: 800;
+  font-size: 36px;      
+  color: #ffffff;
+  letter-spacing: .5px; 
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);           
+}
+
+.search-bar {
+  position: relative;
+  width: 280px;         
+}
+
+.search-bar input[type="search"]{
+    width: 100%;
+    padding: 10px 14px 10px 40px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.25);
+    outline: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='8'/><line x1='21' y1='21' x2='16.65' y2='16.65'/></svg>");
+    background-position: 12px 50%;
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    height: 38px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.12);
+}
+
+.links{
+    display:flex;
+    gap: 20px; 
+    list-style:none;
+    margin:0; padding:0; 
+}
+
+.links a:hover{
+  background: rgba(255,255,255,.18);
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    text-shadow: 0 1px 0 rgba(0,0,0,.15); 
+}
+/***********************************************************************class="page"*****************************************************/
+/* ===== Base ===== */
+:root{
+  --bg:#f4e3c9;
+  --panel:#fff;
+  --border:rgba(0,0,0,.08);
+  --radius:14px;
+  --shadow:0 4px 14px rgba(0,0,0,.10);
+}
+
+.page{ max-width: 920px; margin: 0 auto; padding: 24px; }
+.page-grid{
+  display: grid;
+  grid-template-columns: 1fr;   
+  row-gap: 18px;              
+}
+
+/* ===== Panels (sections) ===== */
+.section{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px 18px;
+}
+
+/* ===== Typography ===== */
+.h2{ font-family:'Roboto Slab',serif; font-size: 28px; margin: 0 0 6px; }
+.h3{ font-family:'Roboto Slab',serif; font-size: 22px; margin: 0 0 10px; padding-bottom: 6px; border-bottom: 1px solid rgba(0,0,0,.06); }
+.h4{ font-family:'Roboto Slab',serif; font-size: 18px; margin: 8px 0 6px; }
+.muted, .email{ color:#4b4b4b; margin:0; }
+
+/* ===== Profile header ===== */
+.profil-header{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.profil-header .details{ display: flex; flex-direction: column; gap: 6px; }
+
+/* Meta row: bookmark + count */
+.meta{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color:#2f2a25;
+  font-weight:600;
+}
+.bookmark{
+  width: 20px; height: 20px;
+  fill: currentColor;           
+  display: inline-block;
+}
+
+/* ===== Reading history (covers) ===== */
+.covers{
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+}
+.covers img{
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.12);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.covers img:hover{ transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0,0,0,.15); }
+
+/* ===== My groups grid ===== */
+.groups-grid{
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+.group-card-mini{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.group-thumb{
+  width: 100%;
+  aspect-ratio: 1 / 1;         
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.12);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.group-card-mini:hover .group-thumb{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.15);
+}
+.group-caption{
+  margin-top: 6px;
+  font-size: 14px;
+  text-align: center;
+  color:#333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/***************************************************************************<div class="footer">***********************************************/
+
+.footer {
+  margin-top: auto;
+  color: #e1bf96;
+  text-align: center;
+  padding: 32px;
+  font-size: 18px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15); 
+}
