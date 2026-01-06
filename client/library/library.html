@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Book Club</title>
     <link rel="stylesheet" href="library.css">
+    <link rel="stylesheet" href="../shared/site.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="../shared/site.js" defer></script>
 </head>
 <body>
 
@@ -25,6 +27,7 @@
                 <li data-show="auth" class="hidden"><a href="profile.html">My Profile</a></li>
                 <li data-show="auth" class="hidden"><a href="groups.html">All Groups</a></li>
                 <li data-show="auth" class="hidden"><a href="create-group.html">Create Group</a></li>
+                <li data-show="auth" class="hidden"><a href="#" id="logout-btn">Logout</a></li>
             </ul>
         </div>
     </div>
@@ -32,26 +35,28 @@
     <div class="library"> <!-- Library container: holds the section title and all book cards -->
         <h2 class="library-title">Library</h2>
         <div class="books-grid"><!-- Books grid: container that holds all book-card elements -->
-            <article class="book-card"><!-- Single book card: contains cover image, title, author, price, and bookmark icon -->
-                <div class="cover-wrap"><!-- Cover wrapper: container for the book cover image (helps with styling, sizing, and adding overlays if needed) -->
-                    <img class="cover" src="../images/books/WilliamShakespeare.jpg" alt="Book cover"></div>
-                     <!-- Info container: holds all textual information about the book -->
-                    <div class="info">
-                        <h3 class="title">William Shakespeare</h3>
-                        <p class="author">William Shakespeare</p>
-                        <!-- Meta section: extra info such as bookmark icon and price -->
-                        <div class="meta">
-                             <!-- Bookmark icon (SVG graphic) -->
-                        <svg class="bookmark" viewBox="0 0 24 24" aria-hidden="true">
-                             <!-- Path defines the shape of the bookmark icon -->
-                        <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"></path>
-                        </svg>
-                        <span class="price">0</span>
+            <a class="book-link" href="../book/book.html?id=shakespeare">
+                <article class="book-card"><!-- Single book card: contains cover image, title, author, price, and bookmark icon -->
+                    <div class="cover-wrap"><!-- Cover wrapper: container for the book cover image (helps with styling, sizing, and adding overlays if needed) -->
+                        <img class="cover" src="../images/books/WilliamShakespeare.jpg" alt="Book cover"></div>
+                        <!-- Info container: holds all textual information about the book -->
+                        <div class="info">
+                            <h3 class="title">William Shakespeare</h3>
+                            <p class="author">William Shakespeare</p>
+                            <!-- Meta section: extra info such as bookmark icon and price -->
+                            <div class="meta">
+                                <!-- Bookmark icon (SVG graphic) -->
+                            <svg class="bookmark" viewBox="0 0 24 24" aria-hidden="true">
+                                <!-- Path defines the shape of the bookmark icon -->
+                            <path d="M6 2h12a1 1 0 0 1 1 1v19l-7-4-7 4V3a1 1 0 0 1 1-1z"></path>
+                            </svg>
+                            <span class="price">0</span>
+                            </div>
                         </div>
-                    </div>
-            </article>
-
-            <article class="book-card">
+                </article>
+            </a>
+            <a class="book-link" href="../book/book.html?id=moby-dick">
+                <article class="book-card">
                 <div class="cover-wrap">
                     <img class="cover" src="../images/books/mobyDick.jpg" alt="Book cover"></div>
                     <div class="info">
@@ -65,8 +70,9 @@
                         </div>
                     </div>
             </article>
+            </a>
             
-            <a class="book-link" href="../book/book.html">
+            <a class="book-link" href="../book/book.html?id=romeo-juliet">
                 <article class="book-card">
                     <div class="cover-wrap">
                         <img class="cover" src="../images/books/Romeo&Juliet.jpg" alt="Book cover"></div>
