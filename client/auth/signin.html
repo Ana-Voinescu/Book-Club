@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Book Club</title>
+    <link rel="stylesheet" href="../shared/site.css">
     <link rel="stylesheet" href="../auth/signin.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="../shared/site.js" defer></script>
+    <script src="signin.js" defer></script>
 </head>
 
 <body>
@@ -35,7 +38,7 @@
     <div class="sign-In">
         <h1 class="intro-Title">Welcome back!</h1>       
             <!-- Sign In Form -->
-            <form class="signip-form">
+            <form class="signin-form" novalidate>
                 <!-- Full Name -->
                 <div class="fill">
                     <!-- Email -->
@@ -49,6 +52,8 @@
                     <input type="password" id="password" name="password" placeholder="Enter a password" required>
                 </div>
 
+                <p class="form-error hidden"></p>
+                <p class="welcome-message hidden"></p>
                 <!-- Submit button -->
                 <button type="submit" class="btn primary">Sign In</button>
             </form>

@@ -1,6 +1,25 @@
-//Search Bar:
-// TODO: Implement search autocomplete (filter books as user types)
-// TODO: Debounce input to avoid excessive work while typing
-// TODO: Keyboard support: ArrowUp/ArrowDown to navigate, Enter to select
-// TODO: On Enter (or click) navigate to the selected book page
-// TODO: Close dropdown on Escape, blur, or when input is cleared
+document.addEventListener('DOMContentLoaded', () => {
+  const isAuthed = sessionStorage.getItem('bookclub_isAuthed') === 'true';
+
+const guestPanel = document.querySelector('.intro');
+const ctaBtn = document.querySelector('.intro .btn'); 
+
+
+  if (!isAuthed) return; 
+
+
+  if (guestPanel) guestPanel.classList.add('hidden');
+
+  if (ctaBtn) {
+
+    if (ctaBtn.tagName.toLowerCase() === 'a') {
+      ctaBtn.textContent = 'Go to Library';
+      ctaBtn.href = '../library/library.html';
+    } else {
+      ctaBtn.textContent = 'Go to Library';
+      ctaBtn.addEventListener('click', () => {
+        window.location.href = '../library/library.html';
+      });
+    }
+  }
+});

@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Book Club</title>
-    <link rel="stylesheet" href="./signup.css">
+    <link rel="stylesheet" href="../shared/site.css">
+    <link rel="stylesheet" href="signup.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="../shared/site.js" defer></script>
+    <script src="signup.js" defer></script>
 </head>
 
 <body>
@@ -35,7 +38,7 @@
     <div class="sign-up">
         <h1 class="intro-Title">Welcome aboard — we’re excited you’ve chosen to sign up!</h1>       
                     <!-- Sign Up Form -->
-            <form class="signup-form">
+            <form class="signup-form" novalidate>
                 <!-- Full Name -->
                 <div class="fill">
                     <label for="fullname">Full Name:</label>
@@ -59,6 +62,9 @@
                     <label for="confirm-password">Confirm Password:</label>
                     <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
                 </div>
+
+                <p class="form-error hidden"></p>
+                <p class="welcome-message hidden"></p>
 
 
                 <!-- Submit button -->

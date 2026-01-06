@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Book Club</title>
+    <link rel="stylesheet" href="../shared/site.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <script src="landing.js" defer></script><!-- TO DO! -->
+    <script src="../shared/site.js" defer></script>
+    <script src="landing.js" defer></script>
 </head>
 <body>
    <!-- Global header shared across pages; some nav actions are hidden in guest mode -->
@@ -27,6 +29,7 @@
                 <li data-show="auth" class="hidden"><a href="profile.html">My Profile</a></li>
                 <li data-show="auth" class="hidden"><a href="groups.html">All Groups</a></li>
                 <li data-show="auth" class="hidden"><a href="create-group.html">Create Group</a></li>
+                <li data-show="auth" class="hidden"><a href="#" id="logout-btn">Logout</a></li>
             </ul>
         </div>
     </div>
