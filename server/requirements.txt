@@ -1,0 +1,35 @@
+# FastAPI - Modern web framework for building APIs
+fastapi==0.109.0
+
+# Uvicorn - ASGI server to run FastAPI
+uvicorn[standard]==0.27.0
+
+# SQLAlchemy - ORM for database operations
+sqlalchemy==2.0.25
+
+# Pydantic - Data validation using Python type annotations
+pydantic==2.5.3
+
+# Email validator - Required for Pydantic EmailStr validation
+email-validator==2.1.0
+
+# Pydantic Settings - Settings management
+pydantic-settings==2.1.0
+
+# Bcrypt - Password hashing
+bcrypt==4.1.2
+
+# Python-dotenv - Load environment variables from .env file
+python-dotenv==1.0.0
+
+# Python-multipart - For handling file uploads
+python-multipart==0.0.6
+
+# itsdangerous - Required for SessionMiddleware (not auto-installed by FastAPI)
+itsdangerous==2.1.2
+
+# Note: Starlette is installed automatically by FastAPI
+# SessionMiddleware is included in Starlette (which comes with FastAPI)
+
+# CORS Middleware (already included in FastAPI, but explicit)
+# Used to allow frontend to communicate with backend during development
