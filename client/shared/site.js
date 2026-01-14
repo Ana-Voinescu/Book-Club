@@ -31,11 +31,12 @@ if (isLoggedIn) {
 
 // Temporary book list (until we have DB/API).
 // Each book should have a title and a link to its book page.
-const BOOKS = [
-  { title: 'Romeo&Juliet', href: '../book/book.html' },
-  { title: 'William Shakespeare', href: '../book/book.html' },
-  { title: 'Moby Dick', href: '../book/book.html' },
-];
+const BOOKS = BookData.getAllBooks().map((b) => ({
+  id: b.id,
+  title: b.title,
+}));
+
+
 
 // Cache the search input element.
 const searchInput = document.querySelector('.search-bar input[type="search"]');
@@ -90,7 +91,7 @@ function renderSuggestions(matches) {
 
     // On click, navigate to the book page.
     li.addEventListener('click', () => {
-      window.location.href = book.href;
+      window.location.href = `../book/book.html?id=${book.id}`;
     });
 
     dropdown.appendChild(li);
@@ -175,17 +176,16 @@ searchInput.addEventListener('keydown', (e) => {
   const q = searchInput.value.trim();
   if (q === '') return;
 
-  // If a suggestion is highlighted → go to it
-  if (activeIndex >= 0 && lastMatches[activeIndex]?.href) {
-    window.location.href = lastMatches[activeIndex].href;
+  if (activeIndex >= 0 && lastMatches[activeIndex]?.id) {
+    window.location.href = `../book/book.html?id=${lastMatches[activeIndex].id}`;
     return;
   }
 
-  // If one clear result, go to it
-  if (lastMatches.length === 1 && lastMatches[0].href) {
-    window.location.href = lastMatches[0].href;
+  if (lastMatches.length === 1 && lastMatches[0].id) {
+    window.location.href = `../book/book.html?id=${lastMatches[0].id}`;
     return;
-  }
+}
+
 
   // Otherwise, go to Library and pass the query in the URL.
   // Your library page can later read this with:
