@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.middleware.sessions import SessionMiddleware
 from config import settings
-from routes import auth_routes
+from routes import auth_routes, book_routes
 
 # Create FastAPI application
 app = FastAPI(
@@ -57,9 +57,9 @@ def health_check():
 
 # Include routers
 app.include_router(auth_routes.router)
+app.include_router(book_routes.router)
 
 # We'll add more routers in the next phases:
-# - Books endpoints
 # - Groups endpoints
 # - User profile endpoints
 
